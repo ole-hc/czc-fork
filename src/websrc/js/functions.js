@@ -235,9 +235,9 @@ advanced:
 			result = `# ${i18next.t('p.zi.cfg.ss')}
 serial:
 # ${i18next.t('p.zi.cfg.lxzg')}
-  port: tcp://${ip}:${port}
-  adapter: zstack
-  ${mist_cfg_txt}`;
+  	port: tcp://${ip}:${port}
+  	adapter: zstack
+  	${mist_cfg_txt}`;
 			break;
 		case "usb":
 			result = `# ${i18next.t('p.zi.cfg.ha')}
@@ -245,9 +245,9 @@ serial:
 # ${i18next.t('p.zi.cfg.ss')}
 serial:
 # ${i18next.t('p.zi.cfg.lxzg')}
-  port: ${i18next.t('p.zi.cfg.dp')}
-  adapter: zstack
-  ${mist_cfg_txt}`;
+  	port: ${i18next.t('p.zi.cfg.dp')}
+  	adapter: zstack
+  	${mist_cfg_txt}`;
 			break;
 
 		default:
@@ -1412,7 +1412,6 @@ function reconnectEvents() {
 // modal gets created in HTML 
 function startZbFlash(link, fwMode) {
 	$.get(apiLink + api.actions.API_CMD + "&cmd=" + api.commands.CMD_CLIENT_CHECK, function (connectedClients) {
-		console.log("Connected Clients: " + connectedClients);
 		if(connectedClients != 0) {
 			configureClientErrorModal();
 		}
